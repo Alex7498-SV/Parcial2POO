@@ -1,11 +1,9 @@
 
 package Clases.Vehiculo;
 
-import Interfaces.Vehiculos;
 
-public class Coaster implements Vehiculos{
+public class Coaster{
 
-    @Override
     public void Conducir() {
         System.out.println("KAMIKAZE!!!!!!!!!!!");
     }
