@@ -1,12 +1,10 @@
 
-package Clases.Recurso;
+package Builder_recurso;
 
 public class TorreR{
 
-    private int vida = 50;
+    private int vida = 0;
     private int recursos = 0;
-    private int reg = 0;
-    private String nombre = "";
     private String tipor = "";
 
 
@@ -14,20 +12,24 @@ public class TorreR{
         this.tipor = TipoR;
     }
     
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public void setVida(int incVida) {
         this.vida *= incVida;
     }
     
-    public void setReg(int fase) {
-        this.reg = fase;
+    public int getVida() {
+        return vida;
+    }
+
+    public int getRecursos() {
+        return recursos;
+    }
+
+    public String getTipor() {
+        return tipor;
     }
 
     public String Status() {
-        return "La estructura"+ nombre + "posee" + recursos+ "disponibles";
+        return "La edificacion posee " + recursos+ " disponibles del tipo "+ tipor;
     }
 
     public void Recolectar() {

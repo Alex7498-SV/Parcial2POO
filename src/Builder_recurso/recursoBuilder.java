@@ -16,11 +16,12 @@ public abstract class recursoBuilder {
     public TorreR getRecurso(){
         return recurso;
     }
-    
-    public abstract void buildRecurso();
-    public abstract void buildnombre();
+
+    public abstract void buildTipoRecurso(String tipo);
     public abstract void buildVida();
-    public abstract void buildCiclo();
+
+
+    
     
 
 }
