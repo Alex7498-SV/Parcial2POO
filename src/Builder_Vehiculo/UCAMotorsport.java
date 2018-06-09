@@ -1,7 +1,7 @@
 
 package Builder_Vehiculo;
 
-public class UCAMotorsports {
+public class UCAMotorsport {
     private vehiculoBuilder Vbuilder;
     
     public void setVehiculoBuilder(vehiculoBuilder vB){
