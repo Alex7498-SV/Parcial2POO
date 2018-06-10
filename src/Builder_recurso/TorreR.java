@@ -13,7 +13,7 @@ public class TorreR{
     }
     
     public void setVida(int incVida) {
-        this.vida *= incVida;
+        this.vida += incVida;
     }
     
     public int getVida() {
@@ -32,8 +32,12 @@ public class TorreR{
         return "La edificacion posee " + recursos+ " disponibles del tipo "+ tipor;
     }
 
-    public void Recolectar() {
-        
+    public void producirRecurso(int pRec){
+        this.recursos += pRec;
+    }
+    
+    public int Recolectar() {
+        return recursos; 
     }
 
 }
