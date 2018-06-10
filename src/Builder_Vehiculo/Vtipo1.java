@@ -16,11 +16,6 @@ public class Vtipo1 extends vehiculoBuilder{
     }
     
     @Override
-    public void BuildVida() {
-        vehiculo.setVida(75);
-    }
-
-    @Override
     public void Buildataque() {
         vehiculo.setAtaque(50);
     }

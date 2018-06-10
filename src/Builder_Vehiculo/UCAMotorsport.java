@@ -14,7 +14,6 @@ public class UCAMotorsport {
     
     public void armarVehiculo(String nombre){
         Vbuilder.BuildNombre(nombre);
-        Vbuilder.BuildVida();
         Vbuilder.Buildataque();
     }
 }
