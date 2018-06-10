@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 
-package RubenSiguenzas_World;
+package General;
 
-import java.util.Scanner;
 /**
  *
  * @author alex
