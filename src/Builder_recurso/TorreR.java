@@ -6,8 +6,36 @@ public class TorreR{
     private int vida = 0;
     private int recursos = 0;
     private String tipor = "";
+    private String nombreTorre = "";
+    private int fasesConstruccion =  0;
+    boolean ataque = false;
+
+    public boolean isAtaque() {
+        return ataque;
+    }
+
+    public void setAtaque(boolean ataque) {
+        this.ataque = ataque;
+    }
+
+    public String getNombreTorre() {
+        return nombreTorre;
+    }
+
+    public void setNombreTorre(String nombreTorre) {
+        this.nombreTorre = nombreTorre;
+    }
+
+    public int getFasesConstruccion() {
+        return fasesConstruccion;
+    }
+
+    public void setFasesConstruccion(int fasesConstruccion) {
+        this.fasesConstruccion = fasesConstruccion;
+    }
 
 
+    
     public void setTipoR(String TipoR) {
         this.tipor = TipoR;
     }

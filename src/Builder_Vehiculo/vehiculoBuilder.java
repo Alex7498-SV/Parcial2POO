@@ -18,5 +18,6 @@ public abstract class vehiculoBuilder {
     
     public abstract  void BuildNombre(String nombre);
     public abstract void Buildataque();
+    public abstract void Buildtipo(String tipo);
     
 }

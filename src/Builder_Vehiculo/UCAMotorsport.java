@@ -12,8 +12,10 @@ public class UCAMotorsport {
         return Vbuilder.getVehiculo();
     }
     
-    public void armarVehiculo(String nombre){
+    
+    public void armarVehiculo(String nombre, String tipo){
         Vbuilder.BuildNombre(nombre);
         Vbuilder.Buildataque();
+        Vbuilder.Buildtipo(tipo);
     }
 }

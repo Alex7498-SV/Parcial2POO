@@ -9,7 +9,7 @@ public abstract class soldadoBuilder {
     }
     
     public abstract void BuildNombre(String nombre);
-    public abstract void BuildAtaque();
-    public abstract void BuildVida();
+    public abstract void BuildAtaque(float modAtaque);
+    public abstract void BuildVida(float modVida);
     
 }

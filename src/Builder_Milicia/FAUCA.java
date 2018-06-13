@@ -13,9 +13,9 @@ public class FAUCA {
         return  sBuilder.getSoldado();
     }
     
-    public void entrenarSoldado(String nombre){
+    public void entrenarSoldado(String nombre, float modVida, float modAtaque){
         sBuilder.BuildNombre(nombre);
-        sBuilder.BuildVida();
-        sBuilder.BuildAtaque();
+        sBuilder.BuildVida(modVida);
+        sBuilder.BuildAtaque(modAtaque);
     }
 }

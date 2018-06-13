@@ -17,8 +17,9 @@ public abstract class recursoBuilder {
         return recurso;
     }
 
-    public abstract void buildTipoRecurso(String tipo);
+    public abstract void buildNombreTorre(String nombre);
     public abstract void buildVida();
+    public abstract void buildTipoRecurso(String tipo);
 
 
     

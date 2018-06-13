@@ -3,7 +3,7 @@ package Builder_recurso;
 
 public class abstractTorre {
     
-    public TorreR getNuevaTorre(int tipo , String nombre){
+    public TorreR getNuevaTorre(int tipo , String nombre, String type){
         BobElConstructor bob = new BobElConstructor();
         Recurso1 r1 = new Recurso1();
         Recurso2 r2 = new Recurso2();
@@ -12,15 +12,15 @@ public class abstractTorre {
         switch(tipo){
             case 1:
                 bob.setRecursoBuilder(r1);
-                bob.construirTorre(nombre);
+                bob.construirTorre(nombre, type);
                 return bob.getTRecurso();
             case 2:
                 bob.setRecursoBuilder(r2);
-                bob.construirTorre(nombre);
+                bob.construirTorre(nombre, type);
                 return bob.getTRecurso();
             case 3:
                 bob.setRecursoBuilder(r3);
-                bob.construirTorre(nombre);
+                bob.construirTorre(nombre, type);
                 return bob.getTRecurso();
         }
         return null;

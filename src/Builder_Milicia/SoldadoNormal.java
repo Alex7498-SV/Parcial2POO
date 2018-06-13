@@ -13,13 +13,13 @@ public class SoldadoNormal extends soldadoBuilder{
     }
 
     @Override
-    public void BuildAtaque() {
-        soldado.setAtaque(100);
+    public void BuildAtaque(float modAtaque) {
+        soldado.setAtaque((int) (100 + (soldado.getAtaque()*modAtaque)));
     }
 
     @Override
-    public void BuildVida() {
-        soldado.setVida(100);
+    public void BuildVida(float modVida) {
+        soldado.setVida((int) (100 + (soldado.getVida()*modVida)));
     }
     
 }

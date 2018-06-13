@@ -12,8 +12,9 @@ public class BobElConstructor {
         return rebuilder.getRecurso();
     }
     
-    public void construirTorre(String tipo){
-        rebuilder.buildTipoRecurso(tipo);
+    public void construirTorre(String nombre, String tipo){
+        rebuilder.buildNombreTorre(nombre);
         rebuilder.buildVida();
+        rebuilder.buildTipoRecurso(tipo);
     }
 }

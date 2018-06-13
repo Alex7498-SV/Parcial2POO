@@ -13,13 +13,13 @@ public class SuperSoldado extends soldadoBuilder{
     }
 
     @Override
-    public void BuildAtaque() {
-        soldado.setAtaque(150);
+    public void BuildAtaque(float modAtaque) {
+        soldado.setAtaque((int) (150+(soldado.getAtaque()*modAtaque)));
     }
 
     @Override
-    public void BuildVida() {
-        soldado.setVida(200);
+    public void BuildVida(float modVida) {
+        soldado.setVida((int) (200+ (soldado.getVida()*modVida)));
     }
     
 }

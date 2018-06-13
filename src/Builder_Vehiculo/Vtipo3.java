@@ -25,4 +25,8 @@ public class Vtipo3 extends vehiculoBuilder{
         vehiculo.setNombre(nombre);
     }
     
+    @Override
+    public void Buildtipo(String tipo) {
+        vehiculo.setTipo(tipo);
+    }
 }

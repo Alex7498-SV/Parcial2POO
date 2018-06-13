@@ -13,13 +13,17 @@ public class Recurso1 extends recursoBuilder{
     }
     
     @Override
-    public void buildTipoRecurso(String tipo) {
+    public void buildNombreTorre(String tipo) {
         recurso.setTipoR(tipo);
     }
 
     @Override
     public void buildVida() {
         recurso.setVida(50);
+    }
+    
+    public void buildTipoRecurso(String tipo){
+        recurso.setTipoR(tipo);
     }
 
 }
