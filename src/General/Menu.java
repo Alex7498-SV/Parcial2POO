@@ -19,7 +19,7 @@ public class Menu {
     Validacion v = new Validacion();
     Scanner scn = new Scanner(System.in);
     
-    public void MenuPrincipal(usuario u, usuario u1){
+    public boolean MenuPrincipal(usuario u, usuario u1){
         ins.Menu();
         System.out.println("Seleccione una opcion:");
         int op = v.Verificar_numero(scn.nextLine());
@@ -29,23 +29,74 @@ public class Menu {
                     u.mostrarTorres();
                     u.mostrarMilicia();
                     u.mostrarVehiculos();
+                    op = 0;
                     MenuPrincipal(u,u1);
                 case 2:
                     MenuSelecciondeTorre(u);
+                    op = 0;
                     MenuPrincipal(u, u1);
                 case 3:
                     MenuSelecciondeVehiculo(u);
+                    op = 0;
                     MenuPrincipal(u, u1);
                 case 4:
                     MenuSelecciondeMilicia(u);
+                    op = 0;
                     MenuPrincipal(u, u1);
                 case 5:
                     MenuAtaque(u, u1);
+                    op = 0;
                     MenuPrincipal(u, u1);
                 case 6:
-                    
+                    MenuRecoleccion(u);
+                case 7:
+                    op = -1;
             }
         }
+        return false;
+        
+    }
+    
+    public int MenuPrincipalIterativo(usuario u, usuario u1, int turno){
+
+        int op = 0;
+        while(op!= 7){
+            ins.Menu();
+            op = v.Verificar_numero(scn.nextLine());
+            switch(op){
+                case 1:
+                    u.mostrarTorres();
+                    u.mostrarMilicia();
+                    u.mostrarVehiculos();
+//                    turno = 0;
+//                    op = 0;
+                    break;
+                case 2:
+                    MenuSelecciondeTorre(u);
+//                    turno = 0;
+//                    op = 0;
+                    break;
+                case 3:
+                    MenuSelecciondeVehiculo(u);
+//                    turno = 0;
+//                    op = 0;
+                    break;
+                case 4:
+                    MenuSelecciondeMilicia(u);
+//                    turno = 0;
+//                    op = 0;
+                    break;
+                case 5:
+                    MenuAtaque(u, u1);
+//                    turno = 0;
+                    
+                    break;
+                case 6:
+                default:
+                    System.out.println("Dato erroneo, intenta de nuevo");
+                    break;
+            }
+        }return turno = 1;
     }
     
     public void MenuRecoleccion(usuario u){
@@ -55,12 +106,13 @@ public class Menu {
             switch(selec){
                 case 1:
                     System.out.println("Recolectando los recursos de las edificaciones de tipo 1");
-                
+                    u.recolectarRecursosT1(1);
                 case 2:
                     System.out.println("Recolectando los recursos de las edificaciones de tipo 2");
-                    
+                    u.recolectarRecursosT1(2);
                 case 3:
                     System.out.println("Recolectando los recursos de las edificaciones de tipo 3");
+                    u.recolectarRecursosT1(3);
             }
         }
     }
@@ -187,7 +239,7 @@ public class Menu {
     }
     public void MenuSelecciondeVehiculo(usuario u){
         int op = 0;
-        while (op<1 || op>2){
+        while (op<1 || op>3){
             ins.SeleccionVehiculo();
             op = v.Verificar_numero(scn.nextLine());
             String nombret = "";

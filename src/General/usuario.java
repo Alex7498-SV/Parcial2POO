@@ -84,7 +84,7 @@ public class usuario {
         cm.setVida(cm.getVida()-ataque);
     }
     
-    public void recolectarRecursosT1(String r){
+    public void recolectarRecursosT1(int r){
         artorres.forEach(torre->{
             if(torre.getTipor().equals(r)){
                 cm.setCantR1(cm.getCantR1()+ torre.getRecursos());
@@ -92,7 +92,7 @@ public class usuario {
         });
     }
     
-    public void recolectarRecursosT2(String r){
+    public void recolectarRecursosT2(int r){
         artorres.forEach(torre->{
             if(torre.getTipor().equals(r)){
                 cm.setCantR1(cm.getCantR2()+ torre.getRecursos());
@@ -100,7 +100,7 @@ public class usuario {
         });
     }
     
-    public void recolectarRecursosT3(String r){
+    public void recolectarRecursosT3(int r){
         artorres.forEach(torre->{
             if(torre.getTipor().equals(r)){
                 cm.setCantR1(cm.getCantR3()+ torre.getRecursos());
@@ -108,8 +108,9 @@ public class usuario {
         });
     }
     
-    public void recolectarR1
+
     public void subirNivel(){
+        
         if(cm.getNivel()==0){
             if(cm.getCantR1()>=cm.getCostoN1() && cm.getCantR2()>=cm.getCostoN1() && cm.getCantR3()>=cm.getCostoN1()){
                 cm.setCantR1(cm.getCantR1()-cm.getCostoN1());
