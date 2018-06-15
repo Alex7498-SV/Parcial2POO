@@ -19,7 +19,7 @@ public class Recurso3 extends recursoBuilder{
 
     @Override
     public void buildVida() {
-        recurso.setVida(50);
+        recurso.setVida(500);
     }
     
         

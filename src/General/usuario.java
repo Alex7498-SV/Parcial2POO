@@ -30,6 +30,7 @@ public class usuario {
     
     
     Razas raza;
+    
 //Funcion de seleccion de raza
     public Razas SelecRaza(int selec){
         raza = rf.SeleccionRaza(selec);
